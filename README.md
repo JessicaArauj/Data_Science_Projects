@@ -48,7 +48,7 @@ git clone https://github.com/yourusername/your-repo-name.git
 cd financial_risk_and_credit
 ```
 
-3. Open the Jupyter notebook and run the code step by step.
+3. Open the jupyter notebook and run the code step by step.
 
 ## Notes
 
