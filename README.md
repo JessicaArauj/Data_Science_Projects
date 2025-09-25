@@ -2,7 +2,7 @@
 
 This repository contains multiple projects in **data science**, demonstrating **data cleaning, exploratory data analysis, predictive modeling and natural language processing**. Each project is self-contained and includes code, sample datasets, and detailed documentation.
 
-## Projects Overview
+## Overview
 
 ### Data cleaning and treatment 
 
@@ -34,7 +34,7 @@ This repository contains multiple projects in **data science**, demonstrating **
   - Visualizes results using **WordClouds** and frequency bar plots.
   - Tools: **python**, **NLTK**, **scikit-learn** and **wordcloud**.
 
-## How to Use
+## How to use
 
 1. Clone the repository:
 
