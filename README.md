@@ -34,20 +34,6 @@ This repository contains multiple projects in **data science**, demonstrating **
   - Visualizes results using **WordClouds** and frequency bar plots.
   - Tools: **python**, **NLTK**, **scikit-learn** and **wordcloud**.
 
-## Repository Structure
-
-├── data_cleaning_and_treatment/
-│ ├── identifying_and_handling_missing_data.ipynb
-│ └── README.md
-├── financial_risk_and_credit/
-│ ├── credit_classification.ipynb
-│ ├── dataset.csv
-│ └── README.md
-├── sentiment_analysis_nlp/
-│ ├── sentiment_analysis_and_classification_nlp.ipynb
-│ └── README.md
-
-
 ## How to Use
 
 1. Clone the repository:
