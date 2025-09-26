@@ -1,8 +1,19 @@
 # Data Science Projects
 
-This repository contains multiple projects in **data science**, demonstrating **data cleaning, exploratory data analysis, predictive modeling and natural language processing**. Each project is self-contained and includes code, sample datasets, and detailed documentation.
+This repository contains multiple projects in **data science**, demonstrating **data cleaning, exploratory data analysis, predictive modeling and natural language processing**. Each project is self-contained and includes code, sample datasets and detailed documentation.
 
 ## Overview
+
+### Automation EDA
+
+- Focus: **Analyzing participants demographics, employability, revenue and program evaluation**.
+- Highlights:
+  - Explains **participant profiling**, including education, diversity, gender, income, market niche and competitiveness.
+  - Shows **employability analysis**, evaluating job creation and visualizing impact with bar charts.
+  - Presents **revenue impact analysis**, calculating revenue change per participant, identifying >50% growth and generating bar charts by class.
+  - Summarizes **program importance analysis**, aggregating participant ratings and visualizing with pie charts.
+  - Tools: **python, pandas, matplotlib, numpy, and reportlab**.
+
 
 ### Data cleaning and treatment 
 
@@ -24,6 +35,15 @@ This repository contains multiple projects in **data science**, demonstrating **
   - Provides examples of **model evaluation** using accuracy and confusion matrices.
   - Tools: **python**, **pandas**, **seaborn**, **matplotlib** and **scikit-learn**.
 
+### Non-parametric statistics
+
+- Focus: **Applying non-parametric statistical tests on real and synthetic datasets**.
+- Highlights:
+  - Implements **mcnemar test, binomial test, wilcoxon test, chi-square test and kolmogorov-smirnov test**.
+  - Performs **data preprocessing, rank-based analysis and visualization**.
+  - Generates **interactive R notebooks** for hypothesis testing and results interpretation.
+  - Tools: **R, RStudio and RMarkdown**.
+
 ### Sentiment analysis with NLP
 
 - Focus: **Sentiment analysis of Portuguese text data**.
@@ -33,6 +53,15 @@ This repository contains multiple projects in **data science**, demonstrating **
   - Trains **logistic regression models** for sentiment classification.
   - Visualizes results using **WordClouds** and frequency bar plots.
   - Tools: **python**, **NLTK**, **scikit-learn** and **wordcloud**.
+ 
+### SQL BBeaver
+
+- Focus: **Learning and practicing SQL queries and database management**.
+- Highlights:
+  - Performs **table creation, data insertion, selection, filtering, aggregation, joins, updates and deletes**.
+  - Includes **sample scripts** with exercises and solutions.
+  - Demonstrates **query optimization and data manipulation** in a structured database environment.
+  - Tools: **SQL, BBeaver and SQLite**.
 
 ## How to use
 
