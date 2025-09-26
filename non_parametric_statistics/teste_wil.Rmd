@@ -1,0 +1,58 @@
+---
+title: "R Notebook"
+output: html_notebook
+author: "Jessica Teixeira Araujo"
+---
+
+Step-by-step for performing the Wilcoxon Test
+
+Step 1: Assuming a significance level of 5%, i.e., α = 0.05.
+```{r}
+alfa <- 0.05
+print(alfa)
+```
+Step 2: Considering a confidence level of 95%.
+
+```{r}
+confidence_level <- (1 - alfa) * 100
+print(confidence_level)
+```
+
+Step 3: Constructing the vector containing the experimental data.
+
+```{r}
+normal = c(1903, 1935, 1910,2496, 2108, 1961,2060, 1444, 1612, 1316, 1511)
+print(normal)
+dried = c(2009, 1915, 2011, 2463, 2180, 1925, 2122, 1482, 1542, 1443, 1535)
+print(dried)
+```
+Step 4: Applying the function needed to perform the test → wilcox.test
+
+Where:
+
+normal and dried: are the groups being compared;
+
+paired = TRUE: true for paired data;
+
+alternative = c("two.sided"): is used for a two-tailed test.
+
+```{r}
+wilcox.test(normal, dried, paired = TRUE, alternative = c("two.sided"))
+test_result <- wilcox.test(normal, dried, paired = TRUE, alternative = c("two.sided"))
+```
+Step 5: Extracting the p-value for decision making using code.
+
+```{r}
+p_value <- test_result$p.value
+print(p_value)
+```
+Step 6: Making the decision.
+
+```{r}
+if (p_value > alfa) {
+  cat("Since the p-value is greater than α =",alfa,", there is not enough evidence to reject Ho at the",confidence_level,"% confidence level.")
+} else {
+  cat("Since the p-value is less than α =",alfa,", there is enough evidence to reject Ho at the",confidence_level,"% confidence level.")
+}
+```
+

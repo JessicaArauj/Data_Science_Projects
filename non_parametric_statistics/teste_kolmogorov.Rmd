@@ -1,0 +1,53 @@
+---
+title: "R Notebook"
+output: html_notebook
+author: "Jessica Teixeira Araujo"
+---
+
+    Step-by-step for performing the Kolmogorov-Smirnov Test
+
+Step 1: Assuming a significance level of 5%, i.e., α = 0.05.
+```{r}
+alfa <- 0.05
+print(alfa)
+```
+Step 2: Considering a confidence level of 95%.
+
+```{r}
+nivel_de_confianca <- (1 - alfa) * 100
+print(nivel_de_confianca)
+```
+Step 3: Constructing the vector containing the experimental data.
+
+```{r}
+k = c(15,25,10,5,4,1)
+print(k)
+```
+Step 4: Applying the function needed to perform the test → ks.test
+
+Where:
+
+k: vector containing the data; and
+
+"ppois", 1.2: represents the Poisson distribution with lambda equal to 1.2.
+
+```{r}
+ks.test(k, "ppois", 1.2)
+test_result <- ks.test(k, "ppois", 1.2)
+```
+
+Step 5: Extracting the p-value for decision making using code.
+
+```{r}
+p_value <- test_result$p.value
+print(p_value)
+```
+Step 6: Making the decision.
+
+```{r}
+if (p_value > alfa) {
+  cat("Since the p-value is greater than α =",alfa,", there is not enough evidence to reject Ho at the",confidence_level,"% confidence level.")
+} else {
+  cat("Since the p-value is less than α =",alfa,", there is enough evidence to reject Ho at the",confidence_level,"% confidence level.")
+}
+```

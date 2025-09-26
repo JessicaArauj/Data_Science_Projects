@@ -1,0 +1,62 @@
+---
+title: "R Notebook"
+output: html_notebook
+author: "Jessica Teixeira Araujo"
+---
+
+    Step-by-step guide for performing the McNemar Test
+
+Step 1: assuming a significance level of 5%, i.e., α = 0.05.
+
+```{r}
+alfa <- 0.05
+print(alfa)
+```
+Step 2: considering a confidence level of 95%.
+
+```{r}
+confidence_level <- (1 - alpha) * 100
+print(confidence_level)
+```
+Step 3: defining the degrees of freedom.
+
+```{r}
+df <- 1
+print(df)
+```
+Step 4: finding the critical value for the chi-square distribution.
+
+```{r}
+critical_value <- qchisq(1 - alpha, df)
+print(critical_value)
+```
+Step 5: constructing the vector containing the data from the conducted experiment.
+
+```{r}
+contingency_table <- matrix(c(37, 3, 13, 47), nrow = 2, byrow = TRUE)
+print(contingency_table)
+```
+Passo 6: aplicando a função necessária para execução do teste → mcnemar.test
+
+```{r}
+mcnemar.test(contingency_table)
+test_result <- mcnemar.test(contingency_table)
+```
+Passo 7: extraindo o p-valor para tomada de decisão por laço de código.
+
+```{r}
+p_value <- test_result$p.value
+print(p_value)
+```
+Passo 8: tomando a decisão.
+
+```{r}
+if (p_value > alpha) {
+  cat("Since the p-value is greater than α =", alpha, 
+      ", there is not enough evidence to reject Ho at the confidence level of", confidence_level, "%.")
+} else {
+  cat("Since the p-value is less than α =", alpha, 
+      ", there is enough evidence to reject Ho at the confidence level of", confidence_level, "%.")
+}
+```
+
